@@ -1,18 +1,33 @@
 # FsGiochi
 
-Un'applicazione web per giochi sviluppata con Angular.
+Un sito web moderno per la distribuzione e noleggio di giochi per bambini, sviluppato con Angular 20.
 
 ## Descrizione
 
-FsGiochi è un progetto web moderno costruito con il framework Angular, progettato per fornire un'esperienza di gioco interattiva e coinvolgente.
+FsGiochi è un sito web moderno che presenta i servizi di FS Giochi, azienda specializzata nella distribuzione e noleggio di:
+- Distributori automatici di palline magiche e con sorprese
+- Calciobalilla e biliardini professionali
+- Giostrine a dondolo per bambini
+- Biliardi professionali
+
+Il sito è rivolto a bar, ristoranti, parchi giochi, centri commerciali, centri sportivi e ludoteche nella zona di Roma.
+
+## Tecnologie Utilizzate
+
+- **Angular 20** - Framework per applicazioni web
+- **TypeScript 5.9** - Linguaggio di programmazione
+- **Bootstrap 5** - Framework CSS per design responsivo
+- **SCSS** - Preprocessore CSS
+- **Reactive Forms** - Gestione avanzata dei form
+- **Bootstrap Icons** - Set di icone moderne
 
 ## Prerequisiti
 
 Prima di iniziare, assicurati di avere installato:
 
-- [Node.js](https://nodejs.org/) (versione LTS consigliata)
-- [npm](https://www.npmjs.com/) o [yarn](https://yarnpkg.com/) come package manager
-- [Angular CLI](https://angular.io/cli) - Installabile con `npm install -g @angular/cli`
+- [Node.js](https://nodejs.org/) (versione 20.x o successiva)
+- [npm](https://www.npmjs.com/) (versione 10.x o successiva)
+- [Angular CLI](https://angular.io/cli) versione 20 - Installabile con `npm install -g @angular/cli@20`
 
 ## Installazione
 
@@ -27,14 +42,15 @@ cd FsGiochi
 npm install
 ```
 
-oppure, se usi yarn:
-```bash
-yarn install
-```
-
 ## Sviluppo
 
 Per avviare il server di sviluppo:
+
+```bash
+npm start
+```
+
+oppure:
 
 ```bash
 ng serve
@@ -44,58 +60,92 @@ Naviga su `http://localhost:4200/`. L'applicazione si ricaricherà automaticamen
 
 ## Build
 
-Per compilare il progetto per la produzione:
+### Build di sviluppo
 
 ```bash
-ng build
+npm run build
 ```
 
-Gli artefatti della build saranno salvati nella directory `dist/`.
-
-### Build di produzione
-
-Per una build ottimizzata per la produzione:
+### Build di produzione per GitHub Pages
 
 ```bash
-ng build --configuration production
+npm run build:prod
 ```
 
-## Test
+Gli artefatti della build saranno salvati nella directory `dist/FsGiochi/browser/`.
 
-### Test unitari
+## Deployment su GitHub Pages
 
-Esegui i test unitari con:
+Il sito è configurato per il deployment automatico su GitHub Pages tramite GitHub Actions.
 
-```bash
-ng test
-```
+### Setup iniziale
 
-### Test end-to-end
+1. Vai su Settings → Pages nel repository GitHub
+2. Seleziona "GitHub Actions" come sorgente
+3. Il workflow si attiverà automaticamente ad ogni push su `main`
 
-Esegui i test end-to-end con:
+### Deploy manuale
 
-```bash
-ng e2e
-```
+Puoi anche attivare il deploy manualmente dalla tab "Actions" del repository.
 
 ## Struttura del Progetto
 
 ```
 FsGiochi/
-├── src/                    # File sorgente dell'applicazione
-│   ├── app/               # Componenti e moduli Angular
-│   ├── assets/            # File statici (immagini, font, ecc.)
-│   ├── environments/      # Configurazioni per ambienti diversi
-│   └── index.html         # Pagina HTML principale
-├── .gitignore             # File e cartelle da ignorare in Git
-└── README.md              # Questo file
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # Workflow GitHub Actions per deployment
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── home/          # Pagina principale
+│   │   │   ├── products/      # Pagina prodotti
+│   │   │   ├── clients/       # Pagina clienti
+│   │   │   ├── contact/       # Pagina contatti con form
+│   │   │   ├── navbar/        # Barra di navigazione
+│   │   │   └── footer/        # Footer
+│   │   ├── app.config.ts      # Configurazione app
+│   │   ├── app.routes.ts      # Routing
+│   │   └── app.ts             # Componente principale
+│   ├── styles.scss            # Stili globali
+│   └── index.html             # HTML principale
+├── angular.json               # Configurazione Angular
+├── package.json               # Dipendenze npm
+└── README.md                  # Questo file
 ```
 
-## Tecnologie Utilizzate
+## Caratteristiche
 
-- **Angular** - Framework per applicazioni web
-- **TypeScript** - Linguaggio di programmazione
-- **HTML5/CSS3** - Markup e styling
+### Pagine
+
+- **Home**: Landing page con hero section, features, anteprima prodotti e CTA
+- **Prodotti**: Catalogo dettagliato di tutti i prodotti con caratteristiche e vantaggi
+- **Clienti**: Tipologie di clienti target, vantaggi e testimonianze
+- **Contatti**: Form di contatto con validazione reactive forms
+
+### Design
+
+- Design moderno con gradienti e animazioni
+- Completamente responsivo (mobile-first)
+- Card con effetti hover
+- Icone Bootstrap integrate
+- Palette colori personalizzata
+
+### Form di Contatto
+
+Il form di contatto utilizza **Reactive Forms** con validazione completa:
+- Validazione in tempo reale
+- Messaggi di errore personalizzati
+- Feedback visivo sullo stato del form
+- Simulazione invio con loading state
+
+## Test
+
+Esegui i test unitari con:
+
+```bash
+npm test
+```
 
 ## Contribuire
 
@@ -109,7 +159,7 @@ Se vuoi contribuire al progetto:
 
 ## Licenza
 
-Questo progetto è distribuito sotto licenza MIT. Vedi il file `LICENSE` per maggiori dettagli.
+Questo progetto è distribuito sotto licenza MIT.
 
 ## Autore
 
