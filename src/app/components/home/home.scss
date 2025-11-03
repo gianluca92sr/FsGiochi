@@ -1,0 +1,290 @@
+.hero-section {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #fd868c 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 8s ease-in-out infinite;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 10s ease-in-out infinite;
+    animation-delay: -5s;
+  }
+  
+  .min-vh-75 {
+    min-height: 75vh;
+    position: relative;
+    z-index: 1;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: slideInFromLeft 1s ease-out;
+  }
+  
+  .lead {
+    font-size: 1.3rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    animation: slideInFromLeft 1s ease-out 0.2s both;
+  }
+  
+  .btn {
+    animation: slideInFromLeft 1s ease-out 0.4s both;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-image-container {
+  position: relative;
+  animation: slideInFromRight 1s ease-out;
+  
+  .floating-card {
+    animation: float 3s ease-in-out infinite;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transform-style: preserve-3d;
+    
+    &:hover {
+      transform: translateY(-20px) rotateY(5deg);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    
+    i {
+      font-size: 4rem;
+      background: var(--warning-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 5px 10px rgba(250, 112, 154, 0.3));
+    }
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.feature-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: none;
+  border-radius: 20px;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-gradient);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
+    
+    &::before {
+      transform: scaleX(1);
+    }
+    
+    .feature-icon i {
+      transform: scale(1.2) rotate(10deg);
+    }
+  }
+  
+  .feature-icon i {
+    transition: all 0.4s ease;
+    font-size: 3rem;
+  }
+}
+
+.product-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: none;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  &:hover {
+    transform: translateY(-15px) rotateZ(-2deg);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25) !important;
+    
+    &::after {
+      opacity: 1;
+    }
+  }
+  
+  .product-image-wrapper {
+    transition: all 0.5s ease;
+    position: relative;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important;
+    
+    .product-image {
+      width: 100%;
+      height: auto;
+      max-width: 280px;
+      transition: all 0.5s ease;
+      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    }
+  }
+  
+  &:hover .product-image-wrapper {
+    transform: scale(1.05);
+    
+    .product-image {
+      transform: scale(1.1) rotate(5deg);
+      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.2));
+    }
+  }
+  
+  ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      background: var(--success-gradient);
+      border-radius: 50%;
+      margin-right: 0.5rem;
+    }
+    
+    i {
+      display: none;
+    }
+  }
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 30s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Stagger animation for cards
+.feature-card,
+.product-card {
+  animation: fadeInUp 0.6s ease-out both;
+  
+  @for $i from 1 through 8 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

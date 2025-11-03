@@ -1,0 +1,115 @@
+<div class="clients-page">
+  <!-- Page Header -->
+  <section class="page-header py-5 bg-success text-white">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-3">I Nostri Clienti</h1>
+      <p class="lead">Soluzioni su misura per ogni tipo di attività</p>
+    </div>
+  </section>
+
+  <!-- Target Clients -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">A Chi Ci Rivolgiamo</h2>
+        <p class="lead text-muted">Le nostre soluzioni sono perfette per diverse tipologie di attività</p>
+      </div>
+      
+      <div class="row g-4">
+        @for (clientType of clientTypes; track clientType.title) {
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow client-card">
+              <div class="card-body p-4">
+                <div class="client-icon mb-3">
+                  <i class="bi {{ clientType.icon }} fs-1 text-{{ clientType.color }}"></i>
+                </div>
+                <h4 class="card-title mb-3">{{ clientType.title }}</h4>
+                <p class="card-text text-muted mb-3">{{ clientType.description }}</p>
+                <h6 class="fw-bold mb-2">Prodotti consigliati:</h6>
+                <ul class="list-unstyled">
+                  @for (product of clientType.products; track product) {
+                    <li class="mb-2">
+                      <i class="bi bi-check2 text-success me-2"></i>{{ product }}
+                    </li>
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">Vantaggi per la Tua Attività</h2>
+      </div>
+      
+      <div class="row g-4">
+        @for (benefit of benefits; track benefit.title) {
+          <div class="col-md-6 col-lg-3">
+            <div class="text-center">
+              <div class="benefit-icon mb-3">
+                <div class="rounded-circle bg-{{ benefit.color }} bg-opacity-10 d-inline-flex p-4">
+                  <i class="bi {{ benefit.icon }} fs-1 text-{{ benefit.color }}"></i>
+                </div>
+              </div>
+              <h5 class="fw-bold mb-2">{{ benefit.title }}</h5>
+              <p class="text-muted">{{ benefit.description }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">Cosa Dicono di Noi</h2>
+        <p class="lead text-muted">Le opinioni dei nostri clienti soddisfatti</p>
+      </div>
+      
+      <div class="row g-4">
+        @for (testimonial of testimonials; track testimonial.name) {
+          <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body p-4">
+                <div class="mb-3">
+                  @for (star of [1,2,3,4,5]; track star) {
+                    <i class="bi bi-star-fill text-warning"></i>
+                  }
+                </div>
+                <p class="card-text mb-4">"{{ testimonial.text }}"</p>
+                <div class="d-flex align-items-center">
+                  <div class="avatar-circle bg-primary text-white me-3">
+                    {{ testimonial.initials }}
+                  </div>
+                  <div>
+                    <h6 class="mb-0 fw-bold">{{ testimonial.name }}</h6>
+                    <small class="text-muted">{{ testimonial.business }}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-5 bg-success text-white">
+    <div class="container text-center">
+      <h2 class="display-5 fw-bold mb-3">Vuoi Diventare Nostro Cliente?</h2>
+      <p class="lead mb-4">Unisciti alle centinaia di attività che hanno scelto FS Giochi</p>
+      <a routerLink="/contatti" class="btn btn-light btn-lg">
+        <i class="bi bi-telephone me-2"></i>Contattaci Subito
+      </a>
+    </div>
+  </section>
+</div>
