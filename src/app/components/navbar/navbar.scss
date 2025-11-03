@@ -1,0 +1,46 @@
+.navbar {
+  backdrop-filter: blur(10px);
+  background: rgba(245, 87, 108, 0.95) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  
+  .navbar-brand {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+      text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    margin: 0 0.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    
+    &:hover::after,
+    &.active::after {
+      width: 80%;
+    }
+    
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+}
