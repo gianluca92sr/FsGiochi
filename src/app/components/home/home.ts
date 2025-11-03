@@ -34,18 +34,21 @@ export class Home {
   products = [
     {
       icon: 'bi-gift-fill',
+      image: 'images/products/distributore-palline.svg',
       title: 'Distributori Palline',
       description: 'Distributori automatici di palline magiche e con sorprese',
       features: ['Nessuna elettricità', 'Facili da installare', 'Manutenzione minima']
     },
     {
       icon: 'bi-trophy-fill',
+      image: 'images/products/calciobalilla.svg',
       title: 'Calciobalilla',
       description: 'Noleggio e vendita di biliardini professionali',
       features: ['Tavoli professionali', 'Noleggio flessibile', 'Modelli per tutti']
     },
     {
       icon: 'bi-arrow-repeat',
+      image: 'images/products/giostrina.svg',
       title: 'Giostrine',
       description: 'Giostrine a dondolo per bambini di tutte le età',
       features: ['Sicure e certificate', 'Manutenzione inclusa', 'Vari modelli']

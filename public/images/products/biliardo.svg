@@ -1,0 +1,79 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pool/Billiard table -->
+  <defs>
+    <linearGradient id="feltGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#229954;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Table frame (wood) -->
+  <rect x="40" y="100" width="320" height="200" rx="5" fill="#8b4513" stroke="#5d3020" stroke-width="3"/>
+  
+  <!-- Cushion rail -->
+  <rect x="50" y="110" width="300" height="20" fill="#6d4c41" stroke="#4e342e" stroke-width="2"/>
+  <rect x="50" y="270" width="300" height="20" fill="#6d4c41" stroke="#4e342e" stroke-width="2"/>
+  <rect x="50" y="130" width="20" height="140" fill="#6d4c41" stroke="#4e342e" stroke-width="2"/>
+  <rect x="330" y="130" width="20" height="140" fill="#6d4c41" stroke="#4e342e" stroke-width="2"/>
+  
+  <!-- Playing surface (felt) -->
+  <rect x="70" y="130" width="260" height="140" fill="url(#feltGrad)" stroke="#1e8449" stroke-width="1"/>
+  
+  <!-- Pockets (6 pockets) -->
+  <circle cx="75" cy="135" r="10" fill="#2d3436"/>
+  <circle cx="200" cy="135" r="10" fill="#2d3436"/>
+  <circle cx="325" cy="135" r="10" fill="#2d3436"/>
+  <circle cx="75" cy="265" r="10" fill="#2d3436"/>
+  <circle cx="200" cy="265" r="10" fill="#2d3436"/>
+  <circle cx="325" cy="265" r="10" fill="#2d3436"/>
+  
+  <!-- Foot spot -->
+  <circle cx="260" cy="200" r="2" fill="#fff"/>
+  
+  <!-- Head spot -->
+  <circle cx="140" cy="200" r="2" fill="#fff"/>
+  
+  <!-- Rack area marker -->
+  <circle cx="260" cy="200" r="40" fill="none" stroke="#fff" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Billiard balls in triangle rack -->
+  <!-- Row 1 -->
+  <circle cx="260" cy="200" r="8" fill="#f1c40f" stroke="#d4af37" stroke-width="1"/>
+  <text x="260" y="203" font-size="8" font-weight="bold" fill="#2d3436" text-anchor="middle">1</text>
+  
+  <!-- Row 2 -->
+  <circle cx="245" cy="213" r="8" fill="#3498db" stroke="#2980b9" stroke-width="1"/>
+  <text x="245" y="216" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+  
+  <circle cx="275" cy="213" r="8" fill="#e74c3c" stroke="#c0392b" stroke-width="1"/>
+  <text x="275" y="216" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+  
+  <!-- Row 3 -->
+  <circle cx="230" cy="226" r="8" fill="#9b59b6" stroke="#8e44ad" stroke-width="1"/>
+  <text x="230" y="229" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
+  
+  <circle cx="260" cy="226" r="8" fill="#2d3436" stroke="#000" stroke-width="1"/>
+  <text x="260" y="229" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">8</text>
+  
+  <circle cx="290" cy="226" r="8" fill="#e67e22" stroke="#d35400" stroke-width="1"/>
+  <text x="290" y="229" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">5</text>
+  
+  <!-- Cue ball -->
+  <circle cx="120" cy="200" r="8" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  
+  <!-- Cue stick -->
+  <line x1="50" y1="220" x2="110" y2="203" stroke="#8b4513" stroke-width="4" stroke-linecap="round"/>
+  <line x1="50" y1="220" x2="70" y2="215" stroke="#d4a574" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Chalk -->
+  <rect x="310" y="245" width="12" height="12" rx="2" fill="#4a69bd" stroke="#3c5a99" stroke-width="1"/>
+  
+  <!-- Table legs -->
+  <rect x="60" y="300" width="20" height="70" fill="#8b4513" stroke="#5d3020" stroke-width="2"/>
+  <rect x="140" y="300" width="20" height="70" fill="#8b4513" stroke="#5d3020" stroke-width="2"/>
+  <rect x="240" y="300" width="20" height="70" fill="#8b4513" stroke="#5d3020" stroke-width="2"/>
+  <rect x="320" y="300" width="20" height="70" fill="#8b4513" stroke="#5d3020" stroke-width="2"/>
+  
+  <!-- Label -->
+  <text x="200" y="390" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2d3436" text-anchor="middle">BILIARDO</text>
+</svg>

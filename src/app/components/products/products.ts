@@ -15,6 +15,7 @@ export class Products {
       title: 'Distributori di Palline Magiche e con Sorpresa',
       description: 'Distributori automatici meccanici che dispensano palline magiche e palline contenenti sorprese per bambini. Non richiedono corrente elettrica e sono perfetti per bar, ristoranti e locali commerciali.',
       icon: 'bi-gift-fill',
+      image: 'images/products/distributore-palline.svg',
       color: 'primary',
       features: [
         'Funzionamento meccanico senza elettricità',
@@ -37,6 +38,7 @@ export class Products {
       title: 'Calciobalilla e Biliardini',
       description: 'Noleggio e vendita di calciobalilla professionali e biliardini di alta qualità. Ideali per bar, sale giochi, centri sportivi e aree ricreative.',
       icon: 'bi-trophy-fill',
+      image: 'images/products/calciobalilla.svg',
       color: 'success',
       features: [
         'Tavoli professionali certificati',
@@ -59,6 +61,7 @@ export class Products {
       title: 'Giostrine a Dondolo',
       description: 'Giostrine meccaniche a dondolo per bambini, disponibili in vari modelli e temi. Perfette per parchi giochi, centri commerciali, bar e ristoranti family-friendly.',
       icon: 'bi-arrow-repeat',
+      image: 'images/products/giostrina.svg',
       color: 'warning',
       features: [
         'Modelli certificati e sicuri',
@@ -81,6 +84,7 @@ export class Products {
       title: 'Biliardi Professionali',
       description: 'Tavoli da biliardo professionali e semi-professionali in noleggio o vendita. Adatti per bar, pub, sale ricreative e circoli.',
       icon: 'bi-circle-fill',
+      image: 'images/products/biliardo.svg',
       color: 'info',
       features: [
         'Tavoli omologati per competizioni',

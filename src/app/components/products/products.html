@@ -14,8 +14,8 @@
         <div class="product-detail mb-5">
           <div class="row align-items-center">
             <div class="col-lg-5 mb-4 mb-lg-0">
-              <div class="product-image-box bg-{{ product.color }} bg-gradient text-white p-5 rounded shadow">
-                <i class="bi {{ product.icon }} display-1 d-block text-center"></i>
+              <div class="product-image-box bg-white p-4 rounded shadow">
+                <img [src]="product.image" [alt]="product.title" class="img-fluid">
               </div>
             </div>
             <div class="col-lg-7">
