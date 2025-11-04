@@ -1,0 +1,22 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.modal-content {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+  background-color: #007bff;
+  color: white;
+  border-bottom: none;
+}
+
+.modal-title {
+  width: 100%;
+  text-align: center;
+}
