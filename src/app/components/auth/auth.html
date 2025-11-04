@@ -1,0 +1,31 @@
+<div class="auth-container">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Accesso Richiesto</h5>
+      </div>
+      <div class="modal-body">
+        <p>Inserisci il codice di accesso per continuare:</p>
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="accessCode"
+              name="accessCode"
+              placeholder="Inserisci il codice"
+              required
+              autofocus
+            />
+          </div>
+          @if (errorMessage) {
+            <div class="alert alert-danger" role="alert">
+              {{ errorMessage }}
+            </div>
+          }
+          <button type="submit" class="btn btn-primary w-100">Accedi</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
