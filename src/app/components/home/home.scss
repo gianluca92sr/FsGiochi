@@ -191,30 +191,11 @@
   }
   
   .product-image-wrapper {
-    transition: all 0.5s ease;
-    position: relative;
-    min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%) !important;
-    
-    .product-image {
-      width: 100%;
-      height: auto;
-      max-width: 280px;
-      transition: all 0.5s ease;
-      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
-    }
+    padding: 1rem;
   }
   
   &:hover .product-image-wrapper {
     transform: scale(1.05);
-    
-    .product-image {
-      transform: scale(1.1) rotate(5deg);
-      filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.2));
-    }
   }
   
   ul li {
